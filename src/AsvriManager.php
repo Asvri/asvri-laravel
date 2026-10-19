@@ -10,7 +10,7 @@ use Asvri\Service\WebhookEndpoints;
 /**
  * What the Asvri facade calls: the PHP SDK's services, plus helpers for the usual Laravel checkout.
  *
- *   return Asvri::checkout(['amount' => 2500, 'currency' => 'NGN', 'reference' => $order->id], "order-{$order->id}");
+ *   return Asvri::checkout(['amount' => 25, 'currency' => 'USD', 'reference' => $order->id], "order-{$order->id}");
  *   $session = Asvri::checkoutSessions()->retrieve($request->query('session_id'));
  */
 class AsvriManager

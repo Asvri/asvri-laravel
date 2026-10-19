@@ -45,7 +45,7 @@ use Asvri\Laravel\Facades\Asvri;
 Route::post('/orders/{order}/pay', function (Order $order) {
     return Asvri::checkout([
         'amount' => $order->total,          // major units; or 'line_items' => [['name' => …, 'quantity' => 1, 'amount' => …]]
-        'currency' => 'NGN',
+        'currency' => 'USD',
         'reference' => (string) $order->id,
         'customer' => ['name' => $order->name, 'email' => $order->email],
         'success_url' => route('orders.thanks', $order),   // ASVRI adds ?session_id=cs_…
